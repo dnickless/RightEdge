@@ -6,7 +6,7 @@
   <DefaultNamespace>DipBuyerWL4</DefaultNamespace>
   <ProjectId>923ed496-8ccc-4d9c-b472-224d348f994b</ProjectId>
   <LastModified>2016-07-19T17:02:18.6220712-04:00</LastModified>
-  <LastSaved>2016-08-15T15:39:40.4479229-04:00</LastSaved>
+  <LastSaved>2016-08-20T18:34:30.5960573-04:00</LastSaved>
   <FileList>
     <SourceFile>
       <FileName>DipBuyerWL4.cs</FileName>
@@ -83,7 +83,7 @@
       <Value>2</Value>
       <Low>1</Low>
       <High>2</High>
-      <NumSteps>2</NumSteps>
+      <NumSteps>0</NumSteps>
     </SystemParameterInfo>
     <SystemParameterInfo>
       <Name>indexdown1</Name>
@@ -125,7 +125,7 @@
       <Value>1</Value>
       <Low>1</Low>
       <High>5</High>
-      <NumSteps>5</NumSteps>
+      <NumSteps>0</NumSteps>
     </SystemParameterInfo>
     <SystemParameterInfo>
       <Name>allocation</Name>
@@ -139,7 +139,7 @@
       <Value>1</Value>
       <Low>1</Low>
       <High>5</High>
-      <NumSteps>5</NumSteps>
+      <NumSteps>0</NumSteps>
     </SystemParameterInfo>
     <SystemParameterInfo>
       <Name>indexup1</Name>
@@ -183,6 +183,13 @@
       <High>20</High>
       <NumSteps>0</NumSteps>
     </SystemParameterInfo>
+    <SystemParameterInfo>
+      <Name>cutofftime</Name>
+      <Value>810</Value>
+      <Low>570</Low>
+      <High>840</High>
+      <NumSteps>10</NumSteps>
+    </SystemParameterInfo>
   </SystemParameters>
   <GenerateDebugInfo>true</GenerateDebugInfo>
   <WarningLevel>4</WarningLevel>
@@ -212,7 +219,7 @@
   <LiveLeadBars>26</LiveLeadBars>
   <LiveDataStartDate>2015-01-01T00:00:00</LiveDataStartDate>
   <DataStartDate>0001-01-01T00:00:00</DataStartDate>
-  <TradeStartDate>2015-01-01T00:00:00</TradeStartDate>
+  <TradeStartDate>2015-03-01T00:00:00</TradeStartDate>
   <RunEndDate>0001-01-01T00:00:00</RunEndDate>
   <StartingCapital>300000</StartingCapital>
   <AllocationType>Percentage</AllocationType>

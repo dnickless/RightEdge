@@ -26,6 +26,8 @@ public class MySystem : MySystemBase
         PositionManager.BarCountExit = 10;
 		
         PositionManager.CalculateMAEMFE = true;
+		
+		CommonGlobals.LogSettings.LoggingEnabled = false;
     }
 }
 #endregion
@@ -79,7 +81,7 @@ public class MySymbolScript : MySymbolScriptBase
 		
 		//OutputMessage("New auxiliary bar: " + args.Bar.BarStartTime.ToString());
 		
-		if(args.Bar.Close < KBuyDown.Current && args.Bar.BarStartTime.TimeOfDay < TimeSpan.FromHours(12))
+		if(args.Bar.Close < KBuyDown.Current && args.Bar.BarStartTime.TimeOfDay < TimeSpan.FromMinutes(Convert.ToInt32(SystemParameters["cutofftime"])))
 		{
 			dipTime = args.Bar.BarStartTime;
 			if(SystemData.LiveMode)
