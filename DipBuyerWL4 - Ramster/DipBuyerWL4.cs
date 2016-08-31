@@ -14,6 +14,8 @@ public class MySystem : MySystemBase
 {
     public override void Startup()
     {
+		//CommonGlobals.SystemRunUpdateRate = TimeSpan.FromSeconds(1);
+		
 //        PositionManager.ProfitTarget = SystemParameters["takeprofit"];
 //        PositionManager.ProfitTargetType = TargetPriceType.RelativeRatio;
         
@@ -105,10 +107,13 @@ public class MySymbolScript : MySymbolScriptBase
 			settings.StopLoss = (Bars.Current.Close - Bars.PartialItem.Low) / SystemParameters["stoploss"];
 			settings.ProfitTargetType = TargetPriceType.RelativePrice;
 			settings.ProfitTarget = (highest.Current - Bars.PartialItem.Low) /  SystemParameters["takeprofit"];
+			settings.CustomString = lastCustomString;
 			//OutputMessage("SL: " + settings.StopLoss + " PT: " + settings.ProfitTarget);
 			OpenPosition(settings);
 		}
 	}
+	
+	string lastCustomString;
 	
     public override void NewBar()
     {
@@ -124,13 +129,18 @@ public class MySymbolScript : MySymbolScriptBase
         BarData today = Bars.Current;
         
         int c1down=0;
+        lastCustomString = string.Empty;
+		
+		var sum = 0;
+        if ((yesterday.Close < yesterday.Open)) { sum += 1; c1down++; };
+		if ((today.Close < today.Open)) { sum += 2; c1down++; };
+        if ((today.Close < yesterday.Close)) { sum += 4; c1down++; };
+        if ((yesterday.Close < yesterday3.Close)) { sum += 8;  c1down++; };
+		lastCustomString += sum + ",";
         
-        if ((yesterday.Close < yesterday.Open)) { /* OutputWarning("1: " + yesterday.Close + " < " + yesterday.Open); */c1down++; };
-        if ((today.Close < today.Open)) { /* OutputWarning("2: " + today.Close + " < " + today.Open); */ c1down++; };
-        if ((today.Close < yesterday.Close)) { /* OutputWarning("3: " + today.Close + " < " + yesterday.Close); */ c1down++; };
-        if ((yesterday.Close < yesterday3.Close)) { /* OutputWarning("4: " + yesterday.Close + " < " + yesterday3.Close); */ c1down++; };
-        
-        double multdown=0;
+		lastCustomString += c1down + ",";
+		
+		double multdown=0;
         
         if ((c1down <= 1)) multdown=SystemParameters["indexdown1"];
         if ((c1down == 2)) multdown=SystemParameters["indexdown2"];
@@ -185,6 +195,9 @@ public class MySymbolScript : MySymbolScriptBase
 
     public override void OrderFilled(Position position, Trade trade)
     {
+		if(trade.TradeType != TradeType.OpenPosition)
+			//System.IO.File.AppendAllText(@"C:\temp\RE out\result.txt", Symbol + "," + position.OpenDate + "," + position.CustomString + position.CurrentStats.RealizedProfit + Environment.NewLine);
+		
 		base.OrderFilled(position, trade);
 		try
 		{
@@ -198,22 +211,22 @@ public class MySymbolScript : MySymbolScriptBase
 				sb.AppendLine();
 				sb.AppendLine("Trade");
 				sb.AppendLine("-----");
-				sb.AppendFormat("  Execution date: {0}", trade.FilledTime);
-				sb.AppendFormat("      Order type: {0}", trade.OrderType);
-				sb.AppendFormat("      Trade type: {0}", trade.TradeType);
-				sb.AppendFormat("Transaction type: {0}", trade.TransactionType);
-				sb.AppendFormat("          Symbol: {0}", Symbol.Name);
-				sb.AppendFormat("            Size: {0}", trade.Size);
-				sb.AppendFormat("           Price: {0}", trade.Price);
-				sb.AppendFormat("      Commission: {0}", trade.Commission);
+				sb.AppendFormat("  Execution date: {0}", trade.FilledTime).AppendLine();
+				sb.AppendFormat("      Order type: {0}", trade.OrderType).AppendLine();
+				sb.AppendFormat("      Trade type: {0}", trade.TradeType).AppendLine();
+				sb.AppendFormat("Transaction type: {0}", trade.TransactionType).AppendLine();
+				sb.AppendFormat("          Symbol: {0}", Symbol.Name).AppendLine();
+				sb.AppendFormat("            Size: {0}", trade.Size).AppendLine();
+				sb.AppendFormat("           Price: {0}", trade.Price).AppendLine();
+				sb.AppendFormat("      Commission: {0}", trade.Commission).AppendLine();
 				sb.AppendLine();
 				sb.AppendLine();
 				sb.AppendLine("Position");
 				sb.AppendLine("--------");
-				sb.AppendFormat("            Size: {0}", position.CurrentSize);
-				sb.AppendFormat("           Value: {0}", position.CurrentValue);
-				sb.AppendFormat("    Realized P/L: {0}", position.RealizedProfit);
-				sb.AppendFormat("  Unrealized P/L: {0}", position.UnrealizedProfit);
+				sb.AppendFormat("            Size: {0}", position.CurrentSize).AppendLine();
+				sb.AppendFormat("           Value: {0}", position.CurrentValue).AppendLine();
+				sb.AppendFormat("    Realized P/L: {0}", position.RealizedProfit).AppendLine();
+				sb.AppendFormat("  Unrealized P/L: {0}", position.UnrealizedProfit).AppendLine();
 				
 				var smtp = new SmtpClient
 				{

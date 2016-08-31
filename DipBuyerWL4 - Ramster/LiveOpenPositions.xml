@@ -2,11 +2,11 @@
 <PortfolioXml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Positions>
     <PositionDataXml>
-      <PosID>33266</PosID>
+      <PosID>33271</PosID>
       <Symbol>
         <StrikePrice>0</StrikePrice>
         <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
-        <Name>INCY</Name>
+        <Name>VIAB</Name>
         <SymbolInformation>
           <Margin>0</Margin>
           <TickSize>0</TickSize>
@@ -19,19 +19,19 @@
       <Description />
       <Trades>
         <TradeInfo>
-          <FilledTime>2016-08-17T15:20:02</FilledTime>
+          <FilledTime>2016-08-22T10:35:03</FilledTime>
           <Sequence>1</Sequence>
           <TransactionType>Buy</TransactionType>
           <Price>
-            <SymbolPrice>76.61</SymbolPrice>
-            <AccountPrice>76.61</AccountPrice>
+            <SymbolPrice>41.66</SymbolPrice>
+            <AccountPrice>41.66</AccountPrice>
           </Price>
-          <Size>39</Size>
+          <Size>72</Size>
           <OrderType>Market</OrderType>
           <TradeType>OpenPosition</TradeType>
           <Commission>0</Commission>
           <Description>Open Position</Description>
-          <BuyingPowerChange>-2987.79</BuyingPowerChange>
+          <BuyingPowerChange>-2999.5199999999995</BuyingPowerChange>
           <MarginChange>0</MarginChange>
           <ShortedCashChange>0</ShortedCashChange>
           <ProfitConversionRate>0</ProfitConversionRate>
@@ -39,15 +39,65 @@
         </TradeInfo>
       </Trades>
       <PendingOrders />
-      <ProfitTarget>4.6400000000000006</ProfitTarget>
-      <ProfitTargetPrice>81.25</ProfitTargetPrice>
+      <ProfitTarget>2.240000000000002</ProfitTarget>
+      <ProfitTargetPrice>43.9</ProfitTargetPrice>
       <ProfitTargetType>RelativePrice</ProfitTargetType>
-      <StopLoss>1.3700000000000045</StopLoss>
-      <StopLossPrice>75.24</StopLossPrice>
+      <StopLoss>2</StopLoss>
+      <StopLossPrice>39.66</StopLossPrice>
       <StopLossType>RelativePrice</StopLossType>
       <TrailingStop>0</TrailingStop>
       <TrailingStopType>None</TrailingStopType>
-      <BarCountExit>8</BarCountExit>
+      <BarCountExit>3</BarCountExit>
+      <PendingClose>false</PendingClose>
+      <IsPending>false</IsPending>
+    </PositionDataXml>
+    <PositionDataXml>
+      <PosID>33319</PosID>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>DLTR</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <PositionType>Long</PositionType>
+      <Description />
+      <Trades>
+        <TradeInfo>
+          <FilledTime>2016-08-25T09:45:02</FilledTime>
+          <Sequence>1</Sequence>
+          <TransactionType>Buy</TransactionType>
+          <Price>
+            <SymbolPrice>88.56</SymbolPrice>
+            <AccountPrice>88.56</AccountPrice>
+          </Price>
+          <Size>33</Size>
+          <OrderType>Market</OrderType>
+          <TradeType>OpenPosition</TradeType>
+          <Commission>0</Commission>
+          <Description>Open Position</Description>
+          <BuyingPowerChange>-2922.48</BuyingPowerChange>
+          <MarginChange>0</MarginChange>
+          <ShortedCashChange>0</ShortedCashChange>
+          <ProfitConversionRate>0</ProfitConversionRate>
+          <OrderID>1</OrderID>
+        </TradeInfo>
+      </Trades>
+      <PendingOrders />
+      <ProfitTarget>8.0499999999999972</ProfitTarget>
+      <ProfitTargetPrice>96.61</ProfitTargetPrice>
+      <ProfitTargetType>RelativePrice</ProfitTargetType>
+      <StopLoss>7.1899999999999977</StopLoss>
+      <StopLossPrice>81.37</StopLossPrice>
+      <StopLossType>RelativePrice</StopLossType>
+      <TrailingStop>0</TrailingStop>
+      <TrailingStopType>None</TrailingStopType>
+      <BarCountExit>6</BarCountExit>
       <PendingClose>false</PendingClose>
       <IsPending>false</IsPending>
     </PositionDataXml>
@@ -58,7 +108,7 @@
       <Symbol>
         <StrikePrice>0</StrikePrice>
         <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
-        <Name>INCY</Name>
+        <Name>VIAB</Name>
         <SymbolInformation>
           <Margin>0</Margin>
           <TickSize>0</TickSize>
@@ -68,12 +118,35 @@
         </SymbolInformation>
       </Symbol>
       <Direction>Long</Direction>
-      <Size>39</Size>
+      <Size>72</Size>
       <EntryPrice>
-        <SymbolPrice>76.61</SymbolPrice>
-        <AccountPrice>76.61</AccountPrice>
+        <SymbolPrice>41.66</SymbolPrice>
+        <AccountPrice>41.66</AccountPrice>
       </EntryPrice>
-      <EntryDate>2016-08-17T15:20:02</EntryDate>
+      <EntryDate>2016-08-22T10:35:03</EntryDate>
+      <Margin>0</Margin>
+      <ShortedCash>0</ShortedCash>
+    </BrokerPosition>
+    <BrokerPosition>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>DLTR</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <Direction>Long</Direction>
+      <Size>33</Size>
+      <EntryPrice>
+        <SymbolPrice>88.56</SymbolPrice>
+        <AccountPrice>88.56</AccountPrice>
+      </EntryPrice>
+      <EntryDate>2016-08-25T09:45:02</EntryDate>
       <Margin>0</Margin>
       <ShortedCash>0</ShortedCash>
     </BrokerPosition>
@@ -84,7 +157,7 @@
         <Symbol>
           <StrikePrice>0</StrikePrice>
           <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
-          <Name>INCY</Name>
+          <Name>VIAB</Name>
           <SymbolInformation>
             <Margin>0</Margin>
             <TickSize>0</TickSize>
@@ -95,7 +168,26 @@
         </Symbol>
       </key>
       <value>
-        <double>76.11</double>
+        <double>40.48</double>
+      </value>
+    </item>
+    <item>
+      <key>
+        <Symbol>
+          <StrikePrice>0</StrikePrice>
+          <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+          <Name>DLTR</Name>
+          <SymbolInformation>
+            <Margin>0</Margin>
+            <TickSize>0</TickSize>
+            <ContractSize>0</ContractSize>
+            <DecimalPlaces>2</DecimalPlaces>
+            <ShortMargin>0</ShortMargin>
+          </SymbolInformation>
+        </Symbol>
+      </key>
+      <value>
+        <double>82.71</double>
       </value>
     </item>
   </CurrentPrices>

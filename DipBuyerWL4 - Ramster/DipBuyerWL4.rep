@@ -5,8 +5,8 @@
   <ProjectName>DipBuyerWL4</ProjectName>
   <DefaultNamespace>DipBuyerWL4</DefaultNamespace>
   <ProjectId>923ed496-8ccc-4d9c-b472-224d348f994b</ProjectId>
-  <LastModified>2016-07-19T17:02:18.6220712-04:00</LastModified>
-  <LastSaved>2016-08-20T18:34:30.5960573-04:00</LastSaved>
+  <LastModified>2016-08-22T02:10:42.8312982-04:00</LastModified>
+  <LastSaved>2016-08-30T01:43:47.7884471-04:00</LastSaved>
   <FileList>
     <SourceFile>
       <FileName>DipBuyerWL4.cs</FileName>
@@ -50,12 +50,6 @@
       <CopyLocal>false</CopyLocal>
     </Reference>
     <Reference>
-      <PathBase>RightEdgeBinDir</PathBase>
-      <Name>Common</Name>
-      <FileName>Common.dll</FileName>
-      <CopyLocal>false</CopyLocal>
-    </Reference>
-    <Reference>
       <PathBase>RightEdgePluginDir</PathBase>
       <Name>Indicators</Name>
       <FileName>Indicators.dll</FileName>
@@ -71,6 +65,12 @@
       <PathBase>RightEdgePluginDir</PathBase>
       <Name>Actions</Name>
       <FileName>Actions.dll</FileName>
+      <CopyLocal>false</CopyLocal>
+    </Reference>
+    <Reference>
+      <PathBase>RightEdgeBinDir</PathBase>
+      <Name>Common</Name>
+      <FileName>Common.dll</FileName>
       <CopyLocal>false</CopyLocal>
     </Reference>
   </References>
@@ -129,7 +129,7 @@
     </SystemParameterInfo>
     <SystemParameterInfo>
       <Name>allocation</Name>
-      <Value>3000</Value>
+      <Value>6000</Value>
       <Low>0</Low>
       <High>0</High>
       <NumSteps>0</NumSteps>
@@ -219,7 +219,7 @@
   <LiveLeadBars>26</LiveLeadBars>
   <LiveDataStartDate>2015-01-01T00:00:00</LiveDataStartDate>
   <DataStartDate>0001-01-01T00:00:00</DataStartDate>
-  <TradeStartDate>2015-03-01T00:00:00</TradeStartDate>
+  <TradeStartDate>2005-03-01T00:00:00</TradeStartDate>
   <RunEndDate>0001-01-01T00:00:00</RunEndDate>
   <StartingCapital>300000</StartingCapital>
   <AllocationType>Percentage</AllocationType>
