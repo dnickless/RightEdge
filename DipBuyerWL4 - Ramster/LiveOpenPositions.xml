@@ -2,11 +2,11 @@
 <PortfolioXml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Positions>
     <PositionDataXml>
-      <PosID>33271</PosID>
+      <PosID>197383</PosID>
       <Symbol>
         <StrikePrice>0</StrikePrice>
         <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
-        <Name>VIAB</Name>
+        <Name>VRTX</Name>
         <SymbolInformation>
           <Margin>0</Margin>
           <TickSize>0</TickSize>
@@ -19,32 +19,33 @@
       <Description />
       <Trades>
         <TradeInfo>
-          <FilledTime>2016-08-22T10:35:03</FilledTime>
-          <Sequence>1</Sequence>
+          <FilledTime>2016-09-14T14:20:01</FilledTime>
+          <Sequence>4</Sequence>
           <TransactionType>Buy</TransactionType>
           <Price>
-            <SymbolPrice>41.66</SymbolPrice>
-            <AccountPrice>41.66</AccountPrice>
+            <SymbolPrice>89.4099</SymbolPrice>
+            <AccountPrice>89.4099</AccountPrice>
           </Price>
-          <Size>72</Size>
+          <Size>33</Size>
           <OrderType>Market</OrderType>
           <TradeType>OpenPosition</TradeType>
           <Commission>0</Commission>
           <Description>Open Position</Description>
-          <BuyingPowerChange>-2999.5199999999995</BuyingPowerChange>
+          <BuyingPowerChange>-2950.5267</BuyingPowerChange>
           <MarginChange>0</MarginChange>
           <ShortedCashChange>0</ShortedCashChange>
           <ProfitConversionRate>0</ProfitConversionRate>
-          <OrderID>1</OrderID>
+          <OrderID>5</OrderID>
         </TradeInfo>
       </Trades>
+      <CustomString>6,2,</CustomString>
       <PendingOrders />
-      <ProfitTarget>2.240000000000002</ProfitTarget>
-      <ProfitTargetPrice>43.9</ProfitTargetPrice>
+      <ProfitTarget>9.6899999999999977</ProfitTarget>
+      <ProfitTargetPrice>99.099899999999991</ProfitTargetPrice>
       <ProfitTargetType>RelativePrice</ProfitTargetType>
-      <StopLoss>2</StopLoss>
-      <StopLossPrice>39.66</StopLossPrice>
-      <StopLossType>RelativePrice</StopLossType>
+      <StopLoss>88.17</StopLoss>
+      <StopLossPrice>88.17</StopLossPrice>
+      <StopLossType>AbsolutePrice</StopLossType>
       <TrailingStop>0</TrailingStop>
       <TrailingStopType>None</TrailingStopType>
       <BarCountExit>3</BarCountExit>
@@ -52,11 +53,11 @@
       <IsPending>false</IsPending>
     </PositionDataXml>
     <PositionDataXml>
-      <PosID>33319</PosID>
+      <PosID>33459</PosID>
       <Symbol>
         <StrikePrice>0</StrikePrice>
         <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
-        <Name>DLTR</Name>
+        <Name>WFM</Name>
         <SymbolInformation>
           <Margin>0</Margin>
           <TickSize>0</TickSize>
@@ -69,31 +70,395 @@
       <Description />
       <Trades>
         <TradeInfo>
-          <FilledTime>2016-08-25T09:45:02</FilledTime>
+          <FilledTime>2016-09-07T09:50:04</FilledTime>
           <Sequence>1</Sequence>
           <TransactionType>Buy</TransactionType>
           <Price>
-            <SymbolPrice>88.56</SymbolPrice>
-            <AccountPrice>88.56</AccountPrice>
+            <SymbolPrice>28.83</SymbolPrice>
+            <AccountPrice>28.83</AccountPrice>
           </Price>
-          <Size>33</Size>
+          <Size>100</Size>
           <OrderType>Market</OrderType>
           <TradeType>OpenPosition</TradeType>
           <Commission>0</Commission>
           <Description>Open Position</Description>
-          <BuyingPowerChange>-2922.48</BuyingPowerChange>
+          <BuyingPowerChange>-2883</BuyingPowerChange>
+          <MarginChange>0</MarginChange>
+          <ShortedCashChange>0</ShortedCashChange>
+          <ProfitConversionRate>0</ProfitConversionRate>
+          <OrderID>1</OrderID>
+        </TradeInfo>
+        <TradeInfo>
+          <FilledTime>2016-09-07T09:50:05</FilledTime>
+          <Sequence>2</Sequence>
+          <TransactionType>Buy</TransactionType>
+          <Price>
+            <SymbolPrice>28.84</SymbolPrice>
+            <AccountPrice>28.84</AccountPrice>
+          </Price>
+          <Size>4</Size>
+          <OrderType>Market</OrderType>
+          <TradeType>OpenPosition</TradeType>
+          <Commission>0</Commission>
+          <Description>Open Position</Description>
+          <BuyingPowerChange>-115.36</BuyingPowerChange>
           <MarginChange>0</MarginChange>
           <ShortedCashChange>0</ShortedCashChange>
           <ProfitConversionRate>0</ProfitConversionRate>
           <OrderID>1</OrderID>
         </TradeInfo>
       </Trades>
+      <CustomString>4,1,</CustomString>
       <PendingOrders />
-      <ProfitTarget>8.0499999999999972</ProfitTarget>
-      <ProfitTargetPrice>96.61</ProfitTargetPrice>
+      <ProfitTarget>2.2900000000000027</ProfitTarget>
+      <ProfitTargetPrice>31.120384615384619</ProfitTargetPrice>
       <ProfitTargetType>RelativePrice</ProfitTargetType>
-      <StopLoss>7.1899999999999977</StopLoss>
-      <StopLossPrice>81.37</StopLossPrice>
+      <StopLoss>2.1900000000000013</StopLoss>
+      <StopLossPrice>26.640384615384615</StopLossPrice>
+      <StopLossType>RelativePrice</StopLossType>
+      <TrailingStop>0</TrailingStop>
+      <TrailingStopType>None</TrailingStopType>
+      <BarCountExit>4</BarCountExit>
+      <PendingClose>false</PendingClose>
+      <IsPending>false</IsPending>
+    </PositionDataXml>
+    <PositionDataXml>
+      <PosID>33493</PosID>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>TSCO</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <PositionType>Long</PositionType>
+      <Description />
+      <Trades>
+        <TradeInfo>
+          <FilledTime>2016-09-08T09:45:04</FilledTime>
+          <Sequence>1</Sequence>
+          <TransactionType>Buy</TransactionType>
+          <Price>
+            <SymbolPrice>70.6</SymbolPrice>
+            <AccountPrice>70.6</AccountPrice>
+          </Price>
+          <Size>8</Size>
+          <OrderType>Market</OrderType>
+          <TradeType>OpenPosition</TradeType>
+          <Commission>0</Commission>
+          <Description>Open Position</Description>
+          <BuyingPowerChange>-564.8</BuyingPowerChange>
+          <MarginChange>0</MarginChange>
+          <ShortedCashChange>0</ShortedCashChange>
+          <ProfitConversionRate>0</ProfitConversionRate>
+          <OrderID>1</OrderID>
+        </TradeInfo>
+        <TradeInfo>
+          <FilledTime>2016-09-08T09:45:04</FilledTime>
+          <Sequence>2</Sequence>
+          <TransactionType>Buy</TransactionType>
+          <Price>
+            <SymbolPrice>70.6</SymbolPrice>
+            <AccountPrice>70.6</AccountPrice>
+          </Price>
+          <Size>34</Size>
+          <OrderType>Market</OrderType>
+          <TradeType>OpenPosition</TradeType>
+          <Commission>0</Commission>
+          <Description>Open Position</Description>
+          <BuyingPowerChange>-2400.3999999999996</BuyingPowerChange>
+          <MarginChange>0</MarginChange>
+          <ShortedCashChange>0</ShortedCashChange>
+          <ProfitConversionRate>0</ProfitConversionRate>
+          <OrderID>1</OrderID>
+        </TradeInfo>
+      </Trades>
+      <CustomString>13,3,</CustomString>
+      <PendingOrders />
+      <ProfitTarget>14.810000000000002</ProfitTarget>
+      <ProfitTargetPrice>85.41</ProfitTargetPrice>
+      <ProfitTargetType>RelativePrice</ProfitTargetType>
+      <StopLoss>13.260000000000005</StopLoss>
+      <StopLossPrice>57.339999999999989</StopLossPrice>
+      <StopLossType>RelativePrice</StopLossType>
+      <TrailingStop>0</TrailingStop>
+      <TrailingStopType>None</TrailingStopType>
+      <BarCountExit>5</BarCountExit>
+      <PendingClose>false</PendingClose>
+      <IsPending>false</IsPending>
+    </PositionDataXml>
+    <PositionDataXml>
+      <PosID>33494</PosID>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>QVCA</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <PositionType>Long</PositionType>
+      <Description />
+      <Trades>
+        <TradeInfo>
+          <FilledTime>2016-09-08T11:05:04</FilledTime>
+          <Sequence>3</Sequence>
+          <TransactionType>Buy</TransactionType>
+          <Price>
+            <SymbolPrice>20.52</SymbolPrice>
+            <AccountPrice>20.52</AccountPrice>
+          </Price>
+          <Size>46</Size>
+          <OrderType>Market</OrderType>
+          <TradeType>OpenPosition</TradeType>
+          <Commission>0</Commission>
+          <Description>Open Position</Description>
+          <BuyingPowerChange>-943.92</BuyingPowerChange>
+          <MarginChange>0</MarginChange>
+          <ShortedCashChange>0</ShortedCashChange>
+          <ProfitConversionRate>0</ProfitConversionRate>
+          <OrderID>6</OrderID>
+        </TradeInfo>
+        <TradeInfo>
+          <FilledTime>2016-09-08T11:05:04</FilledTime>
+          <Sequence>4</Sequence>
+          <TransactionType>Buy</TransactionType>
+          <Price>
+            <SymbolPrice>20.52</SymbolPrice>
+            <AccountPrice>20.52</AccountPrice>
+          </Price>
+          <Size>100</Size>
+          <OrderType>Market</OrderType>
+          <TradeType>OpenPosition</TradeType>
+          <Commission>0</Commission>
+          <Description>Open Position</Description>
+          <BuyingPowerChange>-2052</BuyingPowerChange>
+          <MarginChange>0</MarginChange>
+          <ShortedCashChange>0</ShortedCashChange>
+          <ProfitConversionRate>0</ProfitConversionRate>
+          <OrderID>6</OrderID>
+        </TradeInfo>
+      </Trades>
+      <CustomString>0,0,</CustomString>
+      <PendingOrders />
+      <ProfitTarget>1.4000000000000021</ProfitTarget>
+      <ProfitTargetPrice>21.92</ProfitTargetPrice>
+      <ProfitTargetType>RelativePrice</ProfitTargetType>
+      <StopLoss>1.4000000000000021</StopLoss>
+      <StopLossPrice>19.119999999999997</StopLossPrice>
+      <StopLossType>RelativePrice</StopLossType>
+      <TrailingStop>0</TrailingStop>
+      <TrailingStopType>None</TrailingStopType>
+      <BarCountExit>5</BarCountExit>
+      <PendingClose>false</PendingClose>
+      <IsPending>false</IsPending>
+    </PositionDataXml>
+    <PositionDataXml>
+      <PosID>33552</PosID>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>AVGO</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <PositionType>Long</PositionType>
+      <Description />
+      <Trades>
+        <TradeInfo>
+          <FilledTime>2016-09-09T11:10:03</FilledTime>
+          <Sequence>3</Sequence>
+          <TransactionType>Buy</TransactionType>
+          <Price>
+            <SymbolPrice>163.45</SymbolPrice>
+            <AccountPrice>163.45</AccountPrice>
+          </Price>
+          <Size>18</Size>
+          <OrderType>Market</OrderType>
+          <TradeType>OpenPosition</TradeType>
+          <Commission>0</Commission>
+          <Description>Open Position</Description>
+          <BuyingPowerChange>-2942.1</BuyingPowerChange>
+          <MarginChange>0</MarginChange>
+          <ShortedCashChange>0</ShortedCashChange>
+          <ProfitConversionRate>0</ProfitConversionRate>
+          <OrderID>7</OrderID>
+        </TradeInfo>
+      </Trades>
+      <CustomString>15,4,</CustomString>
+      <PendingOrders />
+      <ProfitTarget>9.9099999999999966</ProfitTarget>
+      <ProfitTargetPrice>173.35999999999999</ProfitTargetPrice>
+      <ProfitTargetType>RelativePrice</ProfitTargetType>
+      <StopLoss>5.039999999999992</StopLoss>
+      <StopLossPrice>158.41</StopLossPrice>
+      <StopLossType>RelativePrice</StopLossType>
+      <TrailingStop>0</TrailingStop>
+      <TrailingStopType>None</TrailingStopType>
+      <BarCountExit>6</BarCountExit>
+      <PendingClose>false</PendingClose>
+      <IsPending>false</IsPending>
+    </PositionDataXml>
+    <PositionDataXml>
+      <PosID>33555</PosID>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>MAR</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <PositionType>Long</PositionType>
+      <Description />
+      <Trades>
+        <TradeInfo>
+          <FilledTime>2016-09-09T13:30:03</FilledTime>
+          <Sequence>8</Sequence>
+          <TransactionType>Buy</TransactionType>
+          <Price>
+            <SymbolPrice>67.7093</SymbolPrice>
+            <AccountPrice>67.7093</AccountPrice>
+          </Price>
+          <Size>44</Size>
+          <OrderType>Market</OrderType>
+          <TradeType>OpenPosition</TradeType>
+          <Commission>0</Commission>
+          <Description>Open Position</Description>
+          <BuyingPowerChange>-2979.2092</BuyingPowerChange>
+          <MarginChange>0</MarginChange>
+          <ShortedCashChange>0</ShortedCashChange>
+          <ProfitConversionRate>0</ProfitConversionRate>
+          <OrderID>18</OrderID>
+        </TradeInfo>
+      </Trades>
+      <CustomString>15,4,</CustomString>
+      <PendingOrders />
+      <ProfitTarget>3.2999999999999972</ProfitTarget>
+      <ProfitTargetPrice>71.0093</ProfitTargetPrice>
+      <ProfitTargetType>RelativePrice</ProfitTargetType>
+      <StopLoss>2.3800000000000097</StopLoss>
+      <StopLossPrice>65.329299999999989</StopLossPrice>
+      <StopLossType>RelativePrice</StopLossType>
+      <TrailingStop>0</TrailingStop>
+      <TrailingStopType>None</TrailingStopType>
+      <BarCountExit>6</BarCountExit>
+      <PendingClose>false</PendingClose>
+      <IsPending>false</IsPending>
+    </PositionDataXml>
+    <PositionDataXml>
+      <PosID>33556</PosID>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>SBAC</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <PositionType>Long</PositionType>
+      <Description />
+      <Trades>
+        <TradeInfo>
+          <FilledTime>2016-09-09T13:35:03</FilledTime>
+          <Sequence>9</Sequence>
+          <TransactionType>Buy</TransactionType>
+          <Price>
+            <SymbolPrice>111.615</SymbolPrice>
+            <AccountPrice>111.615</AccountPrice>
+          </Price>
+          <Size>26</Size>
+          <OrderType>Market</OrderType>
+          <TradeType>OpenPosition</TradeType>
+          <Commission>0</Commission>
+          <Description>Open Position</Description>
+          <BuyingPowerChange>-2901.99</BuyingPowerChange>
+          <MarginChange>0</MarginChange>
+          <ShortedCashChange>0</ShortedCashChange>
+          <ProfitConversionRate>0</ProfitConversionRate>
+          <OrderID>21</OrderID>
+        </TradeInfo>
+      </Trades>
+      <CustomString>6,2,</CustomString>
+      <PendingOrders />
+      <ProfitTarget>7.039999999999992</ProfitTarget>
+      <ProfitTargetPrice>118.65499999999999</ProfitTargetPrice>
+      <ProfitTargetType>RelativePrice</ProfitTargetType>
+      <StopLoss>5.8299999999999983</StopLoss>
+      <StopLossPrice>105.785</StopLossPrice>
+      <StopLossType>RelativePrice</StopLossType>
+      <TrailingStop>0</TrailingStop>
+      <TrailingStopType>None</TrailingStopType>
+      <BarCountExit>6</BarCountExit>
+      <PendingClose>false</PendingClose>
+      <IsPending>false</IsPending>
+    </PositionDataXml>
+    <PositionDataXml>
+      <PosID>33557</PosID>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>MXIM</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <PositionType>Long</PositionType>
+      <Description />
+      <Trades>
+        <TradeInfo>
+          <FilledTime>2016-09-09T13:55:03</FilledTime>
+          <Sequence>10</Sequence>
+          <TransactionType>Buy</TransactionType>
+          <Price>
+            <SymbolPrice>37.9593</SymbolPrice>
+            <AccountPrice>37.9593</AccountPrice>
+          </Price>
+          <Size>79</Size>
+          <OrderType>Market</OrderType>
+          <TradeType>OpenPosition</TradeType>
+          <Commission>0</Commission>
+          <Description>Open Position</Description>
+          <BuyingPowerChange>-2998.7846999999997</BuyingPowerChange>
+          <MarginChange>0</MarginChange>
+          <ShortedCashChange>0</ShortedCashChange>
+          <ProfitConversionRate>0</ProfitConversionRate>
+          <OrderID>24</OrderID>
+        </TradeInfo>
+      </Trades>
+      <CustomString>9,2,</CustomString>
+      <PendingOrders />
+      <ProfitTarget>3.1999999999999957</ProfitTarget>
+      <ProfitTargetPrice>41.159299999999995</ProfitTargetPrice>
+      <ProfitTargetType>RelativePrice</ProfitTargetType>
+      <StopLoss>1.7399999999999949</StopLoss>
+      <StopLossPrice>36.219300000000004</StopLossPrice>
       <StopLossType>RelativePrice</StopLossType>
       <TrailingStop>0</TrailingStop>
       <TrailingStopType>None</TrailingStopType>
@@ -108,30 +473,7 @@
       <Symbol>
         <StrikePrice>0</StrikePrice>
         <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
-        <Name>VIAB</Name>
-        <SymbolInformation>
-          <Margin>0</Margin>
-          <TickSize>0</TickSize>
-          <ContractSize>0</ContractSize>
-          <DecimalPlaces>2</DecimalPlaces>
-          <ShortMargin>0</ShortMargin>
-        </SymbolInformation>
-      </Symbol>
-      <Direction>Long</Direction>
-      <Size>72</Size>
-      <EntryPrice>
-        <SymbolPrice>41.66</SymbolPrice>
-        <AccountPrice>41.66</AccountPrice>
-      </EntryPrice>
-      <EntryDate>2016-08-22T10:35:03</EntryDate>
-      <Margin>0</Margin>
-      <ShortedCash>0</ShortedCash>
-    </BrokerPosition>
-    <BrokerPosition>
-      <Symbol>
-        <StrikePrice>0</StrikePrice>
-        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
-        <Name>DLTR</Name>
+        <Name>VRTX</Name>
         <SymbolInformation>
           <Margin>0</Margin>
           <TickSize>0</TickSize>
@@ -143,10 +485,171 @@
       <Direction>Long</Direction>
       <Size>33</Size>
       <EntryPrice>
-        <SymbolPrice>88.56</SymbolPrice>
-        <AccountPrice>88.56</AccountPrice>
+        <SymbolPrice>89.4099</SymbolPrice>
+        <AccountPrice>89.4099</AccountPrice>
       </EntryPrice>
-      <EntryDate>2016-08-25T09:45:02</EntryDate>
+      <EntryDate>2016-09-14T14:20:01</EntryDate>
+      <Margin>0</Margin>
+      <ShortedCash>0</ShortedCash>
+    </BrokerPosition>
+    <BrokerPosition>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>WFM</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <Direction>Long</Direction>
+      <Size>104</Size>
+      <EntryPrice>
+        <SymbolPrice>28.8303846153846</SymbolPrice>
+        <AccountPrice>28.8303846153846</AccountPrice>
+      </EntryPrice>
+      <EntryDate>2016-09-07T09:50:04</EntryDate>
+      <Margin>0</Margin>
+      <ShortedCash>0</ShortedCash>
+    </BrokerPosition>
+    <BrokerPosition>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>TSCO</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <Direction>Long</Direction>
+      <Size>42</Size>
+      <EntryPrice>
+        <SymbolPrice>70.6</SymbolPrice>
+        <AccountPrice>70.6</AccountPrice>
+      </EntryPrice>
+      <EntryDate>2016-09-08T09:45:04</EntryDate>
+      <Margin>0</Margin>
+      <ShortedCash>0</ShortedCash>
+    </BrokerPosition>
+    <BrokerPosition>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>QVCA</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <Direction>Long</Direction>
+      <Size>146</Size>
+      <EntryPrice>
+        <SymbolPrice>20.52</SymbolPrice>
+        <AccountPrice>20.52</AccountPrice>
+      </EntryPrice>
+      <EntryDate>2016-09-08T11:05:04</EntryDate>
+      <Margin>0</Margin>
+      <ShortedCash>0</ShortedCash>
+    </BrokerPosition>
+    <BrokerPosition>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>AVGO</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <Direction>Long</Direction>
+      <Size>18</Size>
+      <EntryPrice>
+        <SymbolPrice>163.45</SymbolPrice>
+        <AccountPrice>163.45</AccountPrice>
+      </EntryPrice>
+      <EntryDate>2016-09-09T11:10:03</EntryDate>
+      <Margin>0</Margin>
+      <ShortedCash>0</ShortedCash>
+    </BrokerPosition>
+    <BrokerPosition>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>MAR</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <Direction>Long</Direction>
+      <Size>44</Size>
+      <EntryPrice>
+        <SymbolPrice>67.7093</SymbolPrice>
+        <AccountPrice>67.7093</AccountPrice>
+      </EntryPrice>
+      <EntryDate>2016-09-09T13:30:03</EntryDate>
+      <Margin>0</Margin>
+      <ShortedCash>0</ShortedCash>
+    </BrokerPosition>
+    <BrokerPosition>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>SBAC</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <Direction>Long</Direction>
+      <Size>26</Size>
+      <EntryPrice>
+        <SymbolPrice>111.615</SymbolPrice>
+        <AccountPrice>111.615</AccountPrice>
+      </EntryPrice>
+      <EntryDate>2016-09-09T13:35:03</EntryDate>
+      <Margin>0</Margin>
+      <ShortedCash>0</ShortedCash>
+    </BrokerPosition>
+    <BrokerPosition>
+      <Symbol>
+        <StrikePrice>0</StrikePrice>
+        <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+        <Name>MXIM</Name>
+        <SymbolInformation>
+          <Margin>0</Margin>
+          <TickSize>0</TickSize>
+          <ContractSize>0</ContractSize>
+          <DecimalPlaces>2</DecimalPlaces>
+          <ShortMargin>0</ShortMargin>
+        </SymbolInformation>
+      </Symbol>
+      <Direction>Long</Direction>
+      <Size>79</Size>
+      <EntryPrice>
+        <SymbolPrice>37.9593</SymbolPrice>
+        <AccountPrice>37.9593</AccountPrice>
+      </EntryPrice>
+      <EntryDate>2016-09-09T13:55:03</EntryDate>
       <Margin>0</Margin>
       <ShortedCash>0</ShortedCash>
     </BrokerPosition>
@@ -157,7 +660,7 @@
         <Symbol>
           <StrikePrice>0</StrikePrice>
           <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
-          <Name>VIAB</Name>
+          <Name>VRTX</Name>
           <SymbolInformation>
             <Margin>0</Margin>
             <TickSize>0</TickSize>
@@ -168,7 +671,7 @@
         </Symbol>
       </key>
       <value>
-        <double>40.48</double>
+        <double>93.06</double>
       </value>
     </item>
     <item>
@@ -176,7 +679,7 @@
         <Symbol>
           <StrikePrice>0</StrikePrice>
           <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
-          <Name>DLTR</Name>
+          <Name>WFM</Name>
           <SymbolInformation>
             <Margin>0</Margin>
             <TickSize>0</TickSize>
@@ -187,7 +690,121 @@
         </Symbol>
       </key>
       <value>
-        <double>82.71</double>
+        <double>28.52</double>
+      </value>
+    </item>
+    <item>
+      <key>
+        <Symbol>
+          <StrikePrice>0</StrikePrice>
+          <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+          <Name>TSCO</Name>
+          <SymbolInformation>
+            <Margin>0</Margin>
+            <TickSize>0</TickSize>
+            <ContractSize>0</ContractSize>
+            <DecimalPlaces>2</DecimalPlaces>
+            <ShortMargin>0</ShortMargin>
+          </SymbolInformation>
+        </Symbol>
+      </key>
+      <value>
+        <double>69.07</double>
+      </value>
+    </item>
+    <item>
+      <key>
+        <Symbol>
+          <StrikePrice>0</StrikePrice>
+          <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+          <Name>QVCA</Name>
+          <SymbolInformation>
+            <Margin>0</Margin>
+            <TickSize>0</TickSize>
+            <ContractSize>0</ContractSize>
+            <DecimalPlaces>2</DecimalPlaces>
+            <ShortMargin>0</ShortMargin>
+          </SymbolInformation>
+        </Symbol>
+      </key>
+      <value>
+        <double>18.97</double>
+      </value>
+    </item>
+    <item>
+      <key>
+        <Symbol>
+          <StrikePrice>0</StrikePrice>
+          <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+          <Name>AVGO</Name>
+          <SymbolInformation>
+            <Margin>0</Margin>
+            <TickSize>0</TickSize>
+            <ContractSize>0</ContractSize>
+            <DecimalPlaces>2</DecimalPlaces>
+            <ShortMargin>0</ShortMargin>
+          </SymbolInformation>
+        </Symbol>
+      </key>
+      <value>
+        <double>172.82</double>
+      </value>
+    </item>
+    <item>
+      <key>
+        <Symbol>
+          <StrikePrice>0</StrikePrice>
+          <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+          <Name>MAR</Name>
+          <SymbolInformation>
+            <Margin>0</Margin>
+            <TickSize>0</TickSize>
+            <ContractSize>0</ContractSize>
+            <DecimalPlaces>2</DecimalPlaces>
+            <ShortMargin>0</ShortMargin>
+          </SymbolInformation>
+        </Symbol>
+      </key>
+      <value>
+        <double>69.29</double>
+      </value>
+    </item>
+    <item>
+      <key>
+        <Symbol>
+          <StrikePrice>0</StrikePrice>
+          <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+          <Name>SBAC</Name>
+          <SymbolInformation>
+            <Margin>0</Margin>
+            <TickSize>0</TickSize>
+            <ContractSize>0</ContractSize>
+            <DecimalPlaces>2</DecimalPlaces>
+            <ShortMargin>0</ShortMargin>
+          </SymbolInformation>
+        </Symbol>
+      </key>
+      <value>
+        <double>108.9</double>
+      </value>
+    </item>
+    <item>
+      <key>
+        <Symbol>
+          <StrikePrice>0</StrikePrice>
+          <ExpirationDate>0001-01-01T00:00:00</ExpirationDate>
+          <Name>MXIM</Name>
+          <SymbolInformation>
+            <Margin>0</Margin>
+            <TickSize>0</TickSize>
+            <ContractSize>0</ContractSize>
+            <DecimalPlaces>2</DecimalPlaces>
+            <ShortMargin>0</ShortMargin>
+          </SymbolInformation>
+        </Symbol>
+      </key>
+      <value>
+        <double>39.02</double>
       </value>
     </item>
   </CurrentPrices>

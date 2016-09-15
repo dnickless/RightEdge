@@ -19,13 +19,10 @@ public class MySystem : MySystemBase
 //        PositionManager.ProfitTarget = SystemParameters["takeprofit"];
 //        PositionManager.ProfitTargetType = TargetPriceType.RelativeRatio;
         
-        PositionManager.Allocation = SystemParameters["allocation"];
-        PositionManager.AllocationType = PositionAllocationType.FixedValue;
-        
 //        PositionManager.StopLoss = SystemParameters["stoploss"];
 //        PositionManager.StopLossType = TargetPriceType.RelativeRatio;
         
-        PositionManager.BarCountExit = 10;
+        //PositionManager.BarCountExit = 10;
 		
         PositionManager.CalculateMAEMFE = true;
 		
@@ -103,8 +100,10 @@ public class MySymbolScript : MySymbolScriptBase
 ////            settings.LimitPrice = KBuyDown.Current;
 //			settings.StopLossType = TargetPriceType.RelativeRatio;
 //			settings.StopLoss = 0.01;
-			settings.StopLossType = TargetPriceType.RelativePrice;
-			settings.StopLoss = (Bars.Current.Close - Bars.PartialItem.Low) / SystemParameters["stoploss"];
+//			settings.StopLossType = TargetPriceType.RelativePrice;
+//			settings.StopLoss = (Bars.Current.Close - Bars.PartialItem.Low) / SystemParameters["stoploss"];
+			settings.StopLossType = TargetPriceType.AbsolutePrice;
+			settings.StopLoss = Math.Min(Bars.PartialItem.Low, Bars.Current.Close * 0.995);
 			settings.ProfitTargetType = TargetPriceType.RelativePrice;
 			settings.ProfitTarget = (highest.Current - Bars.PartialItem.Low) /  SystemParameters["takeprofit"];
 			settings.CustomString = lastCustomString;

@@ -6,7 +6,7 @@
   <DefaultNamespace>DipBuyerWL4</DefaultNamespace>
   <ProjectId>923ed496-8ccc-4d9c-b472-224d348f994b</ProjectId>
   <LastModified>2016-08-22T02:10:42.8312982-04:00</LastModified>
-  <LastSaved>2016-08-30T01:43:47.7884471-04:00</LastSaved>
+  <LastSaved>2016-09-15T16:10:40.4165463-04:00</LastSaved>
   <FileList>
     <SourceFile>
       <FileName>DipBuyerWL4.cs</FileName>
@@ -81,57 +81,50 @@
     <SystemParameterInfo>
       <Name>rsilength</Name>
       <Value>2</Value>
-      <Low>1</Low>
-      <High>2</High>
-      <NumSteps>0</NumSteps>
+      <Low>2</Low>
+      <High>3</High>
+      <NumSteps>2</NumSteps>
     </SystemParameterInfo>
     <SystemParameterInfo>
       <Name>indexdown1</Name>
       <Value>0.97</Value>
-      <Low>0.82</Low>
-      <High>0.92</High>
-      <NumSteps>0</NumSteps>
+      <Low>0.86</Low>
+      <High>0.96</High>
+      <NumSteps>6</NumSteps>
     </SystemParameterInfo>
     <SystemParameterInfo>
       <Name>indexdown2</Name>
       <Value>0.93</Value>
-      <Low>0.88</Low>
+      <Low>0.86</Low>
       <High>0.96</High>
-      <NumSteps>0</NumSteps>
+      <NumSteps>6</NumSteps>
     </SystemParameterInfo>
     <SystemParameterInfo>
       <Name>indexdown3</Name>
       <Value>0.9</Value>
-      <Low>0.92</Low>
-      <High>0.98</High>
-      <NumSteps>0</NumSteps>
+      <Low>0.86</Low>
+      <High>0.96</High>
+      <NumSteps>6</NumSteps>
     </SystemParameterInfo>
     <SystemParameterInfo>
       <Name>indexdown4</Name>
       <Value>0.98</Value>
-      <Low>0.94</Low>
-      <High>1</High>
-      <NumSteps>0</NumSteps>
+      <Low>0.86</Low>
+      <High>0.96</High>
+      <NumSteps>6</NumSteps>
     </SystemParameterInfo>
     <SystemParameterInfo>
       <Name>xdown</Name>
       <Value>0.96</Value>
-      <Low>0.85</Low>
-      <High>0.95</High>
-      <NumSteps>0</NumSteps>
+      <Low>0.86</Low>
+      <High>0.96</High>
+      <NumSteps>6</NumSteps>
     </SystemParameterInfo>
     <SystemParameterInfo>
       <Name>takeprofit</Name>
       <Value>1</Value>
       <Low>1</Low>
       <High>5</High>
-      <NumSteps>0</NumSteps>
-    </SystemParameterInfo>
-    <SystemParameterInfo>
-      <Name>allocation</Name>
-      <Value>6000</Value>
-      <Low>0</Low>
-      <High>0</High>
       <NumSteps>0</NumSteps>
     </SystemParameterInfo>
     <SystemParameterInfo>
@@ -188,7 +181,7 @@
       <Value>810</Value>
       <Low>570</Low>
       <High>840</High>
-      <NumSteps>10</NumSteps>
+      <NumSteps>0</NumSteps>
     </SystemParameterInfo>
   </SystemParameters>
   <GenerateDebugInfo>true</GenerateDebugInfo>
@@ -217,13 +210,13 @@
     <PluginXml>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TimeFrequency&gt;&lt;BarLengthTicks&gt;864000000000&lt;/BarLengthTicks&gt;&lt;/TimeFrequency&gt;</PluginXml>
   </FrequencySettings>
   <LiveLeadBars>26</LiveLeadBars>
-  <LiveDataStartDate>2015-01-01T00:00:00</LiveDataStartDate>
+  <LiveDataStartDate>2005-01-01T00:00:00</LiveDataStartDate>
   <DataStartDate>0001-01-01T00:00:00</DataStartDate>
-  <TradeStartDate>2005-03-01T00:00:00</TradeStartDate>
+  <TradeStartDate>2015-03-01T00:00:00</TradeStartDate>
   <RunEndDate>0001-01-01T00:00:00</RunEndDate>
   <StartingCapital>300000</StartingCapital>
-  <AllocationType>Percentage</AllocationType>
-  <Allocation>0</Allocation>
+  <AllocationType>Fixed</AllocationType>
+  <Allocation>3000</Allocation>
   <MaxOpenPositions>0</MaxOpenPositions>
   <MaxOpenPositionsPerSymbol>0</MaxOpenPositionsPerSymbol>
   <RestrictOpenOrders>false</RestrictOpenOrders>
@@ -231,7 +224,7 @@
   <ProfitTargetType>None</ProfitTargetType>
   <StopLoss>0</StopLoss>
   <StopLossType>None</StopLossType>
-  <BarTimeout>0</BarTimeout>
+  <BarTimeout>4</BarTimeout>
   <ForceRoundLots>false</ForceRoundLots>
   <ProcessHighTickBeforeLow>true</ProcessHighTickBeforeLow>
 </ProjectSettings>
