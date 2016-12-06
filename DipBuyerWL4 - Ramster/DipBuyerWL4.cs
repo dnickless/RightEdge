@@ -199,7 +199,7 @@ public class MySymbolScript : MySymbolScriptBase
 			{
 				OutputMessage("sending email");
 				var fromAddress = new MailAddress("ramanddan.trading@gmail.com", "RamAndDan Trading");
-				const string fromPassword = "AfMxVqFXU6Mm";
+				const string fromPassword = System.IO.File.ReadAllText(@"C:\temp\do_not_delete\asdf.txt");
 				
 				var sb = new StringBuilder();
 				sb.AppendLine();
