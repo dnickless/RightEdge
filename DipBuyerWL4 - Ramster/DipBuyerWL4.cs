@@ -25,107 +25,88 @@ public class MySystem : MySystemBase
         //PositionManager.BarCountExit = 10;
 		
         PositionManager.CalculateMAEMFE = true;
-		
+		CommonGlobals.SystemRunUpdateRate = TimeSpan.FromSeconds(5);
 		CommonGlobals.LogSettings.LoggingEnabled = false;
+		//SystemData.CreateTicksFromBars = false;
     }
 }
 #endregion
 
 public class MySymbolScript : MySymbolScriptBase
 {
+	double kBuyDownCurrent;
+	bool onlyOneSymbol;
     public UserSeries KBuyDown;
     public UserSeries KBuyUp;
     
-    MACD macd9 = new MACD(12, 26);
-	Highest highest = new Highest(4);
-    EMA ema3 = new EMA(3);
+    MACD macd9;
+	Highest highest;
+    EMA ema3;
     UserSeries index = new UserSeries();
     
-	Frequency freqAux;
-	StochRSI stochRsi9Aux;
+	Frequency freqFive;
+	Frequency freqDaily;
+	StochRSI stochRsi;
+	
+	// system parameters
+	double indexDown1, indexDown2, indexDown3, indexDown4, stopLoss, takeProfit, xDown;
+	TimeSpan cutOffTime;
 	
     public override void Startup()
     {
-        Bars.MaxLookBack = 26;
-        
-        highest.SetInputs(Close);
-        macd9.SetInputs(Close);
-        ema3.SetInputs(Close);
-
-		freqAux = GetFrequency(BarFrequency.FiveMinute);
-		freqAux.NewBar += NewAuxiliaryBar;
+		freqFive = GetFrequency(BarFrequency.FiveMinute);
+		freqFive.NewBar += NewFiveMinuteBar;
+        freqFive.Bars.MaxLookBack = 2;
 		
-		stochRsi9Aux = new StochRSI(Convert.ToInt32(SystemParameters["rsilength"]), freqAux.Close);
-		SystemData.IndicatorManager.SetFrequency(stochRsi9Aux, freqAux);
+		stochRsi = new StochRSI(Convert.ToInt32(SystemParameters["rsilength"]), freqFive.Close);
+		SystemData.IndicatorManager.SetFrequency(stochRsi, freqFive);
+		
+		freqDaily = GetFrequency(BarFrequency.Daily);
+		freqDaily.NewBar += NewDailyBar;
+        freqDaily.Bars.MaxLookBack = 26;
+		
+		highest = new Highest(4, freqDaily.Close);
+		SystemData.IndicatorManager.SetFrequency(highest, freqDaily);
+		
+		ema3 = new EMA(3, freqDaily.Close);
+		SystemData.IndicatorManager.SetFrequency(ema3, freqDaily);
+		
+		macd9 = new MACD(12, 26, freqDaily.Close);
+		SystemData.IndicatorManager.SetFrequency(macd9, freqDaily);
 		
         KBuyDown = new UserSeries();
         KBuyDown.ChartSettings.Color = Color.Red;
         
-//        KBuyUp = new UserSeries();
-//        KBuyUp.ChartSettings.Color = Color.Green;
-        
+		onlyOneSymbol = SystemData.Symbols.Count == 1;
+		
         index.ChartSettings.Color = Color.Green;
         index.ChartSettings.ChartPaneName = "Index";
+		
+		indexDown1 = SystemParameters["indexdown1"];
+		indexDown2 = SystemParameters["indexdown2"];
+		indexDown3 = SystemParameters["indexdown3"];
+		indexDown4 = SystemParameters["indexdown4"];
+		
+		cutOffTime = TimeSpan.FromMinutes(Convert.ToInt32(SystemParameters["cutofftime"]));
+		stopLoss = SystemParameters["stoploss"];
+		takeProfit = SystemParameters["takeprofit"];
+		xDown = SystemParameters["xdown"];
     }
 
 	DateTime dipTime = DateTime.MinValue;
 	
-	public void NewAuxiliaryBar(object sender, SingleBarEventArgs args)
+	public void NewDailyBar(object sender, SingleBarEventArgs args)
 	{
-        if (Bars.Count < 1 || Symbol.Name == "^NDX")
-        {
-			OutputMessage("Returning after " + Bars.Count + " bars.");
-            return;
-        }
-		
-		//OutputMessage("New auxiliary bar: " + args.Bar.BarStartTime.ToString());
-		
-		if(args.Bar.Close < KBuyDown.Current && args.Bar.BarStartTime.TimeOfDay < TimeSpan.FromMinutes(Convert.ToInt32(SystemParameters["cutofftime"])))
-		{
-			dipTime = args.Bar.BarStartTime;
-			if(SystemData.LiveMode)
-			{
-				OutputMessage("Dip detected: " + args.Bar.BarStartTime.ToString());
-			}
-		}
-		
-		if (dipTime.Date == args.Bar.BarStartTime.Date && args.Bar.Close < KBuyDown.Current && stochRsi9Aux.Current > 90 && OpenPositions.Count == 0)
-		{
-//			OutputMessage("BUYING 5 minutes after: " + args.Bar.BarStartTime.ToString());
-			PositionSettings settings = new PositionSettings();
-			//settings.BarsValid = 1;
-			settings.PositionType = PositionType.Long;
-			settings.OrderType = OrderType.Market;
-////            settings.OrderType = OrderType.Limit;
-////            settings.LimitPrice = KBuyDown.Current;
-//			settings.StopLossType = TargetPriceType.RelativeRatio;
-//			settings.StopLoss = 0.01;
-//			settings.StopLossType = TargetPriceType.RelativePrice;
-//			settings.StopLoss = (Bars.Current.Close - Bars.PartialItem.Low) / SystemParameters["stoploss"];
-			settings.StopLossType = TargetPriceType.AbsolutePrice;
-			settings.StopLoss = Math.Min(Bars.PartialItem.Low, Bars.Current.Close * 0.995);
-			settings.ProfitTargetType = TargetPriceType.RelativePrice;
-			settings.ProfitTarget = (highest.Current - Bars.PartialItem.Low) /  SystemParameters["takeprofit"];
-			settings.CustomString = lastCustomString;
-			//OutputMessage("SL: " + settings.StopLoss + " PT: " + settings.ProfitTarget);
-			OpenPosition(settings);
-		}
-	}
-	
-	string lastCustomString;
-	
-    public override void NewBar()
-    {
 		//OutputMessage("New Bar: " + Symbol.Name);
-        if (Bars.Count < 4 || Symbol.Name == "^NDX")
+        if (freqDaily.Bars.Count < 4)
         {
-//			OutputMessage("Returning after " + Bars.Count + " bars.");
+//			OutputMessage("Returning after " + freqDaily.Bars.Count + " bars.");
             return;
         }
-        
-        BarData yesterday = Bars.LookBack(1);
-        BarData yesterday3 = Bars.LookBack(3);
-        BarData today = Bars.Current;
+		
+        BarData yesterday = freqDaily.Bars.LookBack(1);
+        BarData yesterday3 = freqDaily.Bars.LookBack(3);
+        BarData today = freqDaily.Bars.Current;
         
         int c1down=0;
         lastCustomString = string.Empty;
@@ -135,62 +116,76 @@ public class MySymbolScript : MySymbolScriptBase
 		if ((today.Close < today.Open)) { sum += 2; c1down++; };
         if ((today.Close < yesterday.Close)) { sum += 4; c1down++; };
         if ((yesterday.Close < yesterday3.Close)) { sum += 8;  c1down++; };
-		lastCustomString += sum + ",";
+		//lastCustomString += sum + ",";
         
-		lastCustomString += c1down + ",";
+		//lastCustomString += c1down + ",";
 		
 		double multdown=0;
         
-        if ((c1down <= 1)) multdown=SystemParameters["indexdown1"];
-        if ((c1down == 2)) multdown=SystemParameters["indexdown2"];
-        if ((c1down == 3)) multdown=SystemParameters["indexdown3"];
-        if ((c1down == 4)) multdown=SystemParameters["indexdown4"];
+        if ((c1down <= 1)) multdown=indexDown1;
+        if ((c1down == 2)) multdown=indexDown2;
+        if ((c1down == 3)) multdown=indexDown3;
+        if ((c1down == 4)) multdown=indexDown4;
         
         var xDown_Up=ema3.Current*multdown;
-        var xDown_Down=ema3.Current*SystemParameters["xdown"];
+        var xDown_Down=ema3.Current*xDown;
         
-        KBuyDown.Current=((xDown_Up-xDown_Down)/2)*(Math.Max(Math.Min(macd9.Current,-0.5),+0.5))+xDown_Down;
-		//OutputMessage(Bars.Current.BarStartTime +  ": " + c1down + " : "  + Bars.Current.Close + " - " + KBuyDown.Current.ToString() + " = " + (Bars.Current.Close - KBuyDown.Current));
-        
-//        int c1up=0;
-        
-//        if ((yesterday.Close > yesterday.Open))c1up++;
-//        if ((today.Close > today.Open))c1up++;
-//        if ((today.Close > yesterday.Close))c1up++;
-//        if ((yesterday.Close > yesterday3.Close))c1up++;
-        
-//        double multup=0;
-        
-//        if ((c1up <= 1)) multup=SystemParameters["indexup1"];
-//        if ((c1up == 2)) multup=SystemParameters["indexup2"];
-//        if ((c1up == 3)) multup=SystemParameters["indexup3"];
-//        if ((c1up == 4)) multup=SystemParameters["indexup4"];
-        
-//        var xUp_Up=ema3.Current*multup;
-//        var xUp_Down=ema3.Current*(SystemParameters["xup"]);
-        
-//        KBuyUp.Current=((xUp_Up-xUp_Down)/2)*(Math.Max(Math.Min(macd9.Current,-0.5),+0.5))+xUp_Down;
-        
-        //index.Current = (OtherSymbols["^NDX"].Close.Current);
-        //if (index.Current > index.LookBack((int)SystemParameters["ndx"]))
+		kBuyDownCurrent = ((xDown_Up-xDown_Down)/2)*(Math.Max(Math.Min(macd9.Current,-0.5),+0.5))+xDown_Down;
+        if(onlyOneSymbol)
+		{
+			KBuyDown.Current = kBuyDownCurrent;
+		}
+		
+		//OutputMessage(freqDaily.Bars.Current.BarStartTime +  ": " + c1down + " : "  + freqDaily.Bars.Current.Close + " - " + kBuyDownCurrent.ToString() + " = " + (freqDaily.Bars.Current.Close - kBuyDownCurrent));
+	}
+	
+	private void NewFiveMinuteBar(object sender, SingleBarEventArgs args)
+	{
+        if (freqFive.Bars.Count < 1)
         {
-            PositionSettings settings = new PositionSettings();
-            settings.BarsValid = 1;
-            settings.PositionType = PositionType.Long;
-            settings.OrderType = OrderType.Limit;
-            settings.LimitPrice = KBuyDown.Current;
-//            OpenPosition(settings);
+			if(SystemData.LiveMode)
+			{
+				OutputMessage("Returning after " + freqFive.Bars.Count + " bars.");
+			}
+			
+            return;
         }
-//        else if (index.Current < index.LookBack(1))
-//        {
-//            PositionSettings settings = new PositionSettings();
-//            settings.BarsValid = 1;
-//            settings.PositionType = PositionType.Short;
-//            settings.OrderType = OrderType.Limit;
-//            settings.LimitPrice = KBuyUp.Current;
-//            OpenPosition(settings);
-//        }
-    }
+		
+		//OutputMessage("New auxiliary bar: " + args.Bar.BarStartTime.ToString());
+		
+		if(args.Bar.Close < kBuyDownCurrent && args.Bar.BarStartTime.TimeOfDay < cutOffTime)
+		{
+			dipTime = args.Bar.BarStartTime;
+			if(SystemData.LiveMode)
+			{
+				OutputMessage("Dip detected: " + args.Bar.BarStartTime.ToString());
+			}
+		}
+		
+		if (dipTime.Date == args.Bar.BarStartTime.Date && args.Bar.Close < kBuyDownCurrent && stochRsi.Current > 90 && OpenPositions.Count == 0)
+		{
+			//OutputMessage("BUYING 5 minutes after: " + args.Bar.BarStartTime.ToString());
+			PositionSettings settings = new PositionSettings();
+			//settings.BarsValid = 1;
+			settings.PositionType = PositionType.Long;
+			settings.OrderType = OrderType.Market;
+////            settings.OrderType = OrderType.Limit;
+////            settings.LimitPrice = kBuyDownCurrent;
+//			settings.StopLossType = TargetPriceType.RelativeRatio;
+//			settings.StopLoss = 0.01;
+//			settings.StopLossType = TargetPriceType.RelativePrice;
+//			settings.StopLoss = (freqDaily.Bars.Current.Close - freqDaily.Bars.PartialItem.Low) / SystemParameters["stoploss"];
+			settings.StopLossType = TargetPriceType.AbsolutePrice;
+			settings.StopLoss = Math.Min(freqDaily.Bars.PartialItem.Low, args.Bar.Close) * stopLoss;
+			settings.ProfitTargetType = TargetPriceType.RelativePrice;
+			settings.ProfitTarget = (highest.Current - freqDaily.Bars.PartialItem.Low) /  takeProfit;
+			settings.CustomString = lastCustomString;
+			//OutputMessage("SL: " + settings.StopLoss + " PT: " + settings.ProfitTarget);
+			OpenPosition(settings);
+		}
+	}
+	
+	string lastCustomString;
 
     public override void OrderFilled(Position position, Trade trade)
     {

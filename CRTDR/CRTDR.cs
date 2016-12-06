@@ -18,7 +18,7 @@ public class MySystem : MySystemBase
         SystemData.PositionManager.CalculateMAEMFE = true;
     }
     
-    bool DoReinvestment = false;
+    bool DoReinvestment = true;
     
     public override void NewBar()
     //void BarClosing(object sender, NewBarEventArgs args)
@@ -31,10 +31,11 @@ public class MySystem : MySystemBase
         
         var numberOfEntries = 0;
         var listOfStrategiesWithOrders = new List<MySymbolScript>();
-
+		
         double sumCRTDR = 0.0;
         double changeInMoney = 0.0;
-                        
+        
+		// loop through all symbols to calculate sum of all CRTDR values for pro-rata cash distribution
         foreach (MySymbolScript symbolScript in SymbolScripts)
         {
             if (symbolScript.Long)
@@ -45,13 +46,29 @@ public class MySystem : MySystemBase
             }
             
             changeInMoney += symbolScript.IncomingCash;
-            Console.WriteLine(string.Format("change in money {0}", changeInMoney));
+            //Console.WriteLine(string.Format("change in money {0}", changeInMoney));
+        }
+        
+		// let's only trade the triggering symbols that are "above" average in terms of the CRTDR criteria
+		var meanCRTDR = sumCRTDR / (double)numberOfEntries;
+        foreach (MySymbolScript symbolScript in SymbolScripts)
+        {
+            var crtdr = symbolScript.Crtdr;
+			
+            if (symbolScript.Long && (1.0 - crtdr) < meanCRTDR)
+            {
+				// adjust previously calculated values
+                listOfStrategiesWithOrders.Remove(symbolScript);
+                numberOfEntries--;
+                sumCRTDR -= (1.0 - (double)symbolScript.Crtdr);
+            }
         }
         
         double sumInvested = 0.0;
         foreach (MySymbolScript symbolScript in listOfStrategiesWithOrders)
         {
             var crtdr = symbolScript.Crtdr;
+			
             double availableCash = 0.0;
             if(DoReinvestment)
             {
@@ -64,13 +81,13 @@ public class MySystem : MySystemBase
                 availableCash = Math.Min(SystemData.StartingCapital, SystemData.StartingCapital + changeInMoney - SystemData.CurrentEquity);
             }
             
-            var cashToInvest = availableCash * (sumCRTDR == 0.0 ? 1.0 / (double)numberOfEntries : ((1.0 - crtdr) / sumCRTDR));
+            var cashToInvest = availableCash * (sumCRTDR == 0.0 ? 1.0 / (double)numberOfEntries : ((1.0 - crtdr) / sumCRTDR)) * 0.85;
             sumInvested += cashToInvest;
             
-            var amount = (int)(cashToInvest / symbolScript.Bars.Current.Close /* * 0.995*/);
-            Console.WriteLine(string.Format("available cash {0} amount {1} cashToInvest {2} sumInvested  {3}", availableCash, amount, cashToInvest, sumInvested));
+            var amount = (int)(cashToInvest / symbolScript.Bars.Current.Close);
+            //Console.WriteLine(string.Format("available cash {0} amount {1} cashToInvest {2} sumInvested  {3}", availableCash, amount, cashToInvest, sumInvested));
             
-            symbolScript.OpenPosition(PositionType.Long, OrderType.Market, 0, amount);
+			symbolScript.OpenPosition(PositionType.Long, OrderType.Market, 0, amount);
         }
     }
 }
@@ -170,7 +187,7 @@ public class MySymbolScript : MySymbolScriptBase
         var trend = GetTrend();
         var rsi = trend == Trend.Down ? rsiDown : (trend == Trend.Up ? rsiUp : rsiFlat);
         
-        OutputMessage(string.Format("Calculating strategy, high {0} low {1} close {2} rsi {3} crtdr {4} xAverageLong {5} xAverageShort {6}", Bars.Current.High, Bars.Current.Low, Bars.Current.Close, rsi, Crtdr, xAverageLong.Current, xAverageShort.Current));
+        //OutputMessage(string.Format("Calculating strategy, high {0} low {1} close {2} rsi {3} crtdr {4} xAverageLong {5} xAverageShort {6}", Bars.Current.High, Bars.Current.Low, Bars.Current.Close, rsi, Crtdr, xAverageLong.Current, xAverageShort.Current));
         
         if (OpenPositions.Count == 0)
         {

@@ -5,7 +5,7 @@
   <DefaultNamespace>CRTDR</DefaultNamespace>
   <ProjectId>103852ad-666b-430f-8dc6-ecacfa73741a</ProjectId>
   <LastModified>2015-03-11T17:19:56.2849735-04:00</LastModified>
-  <LastSaved>2016-07-30T01:10:15.604961-04:00</LastSaved>
+  <LastSaved>2016-12-02T16:50:35.6568675-05:00</LastSaved>
   <FileList>
     <SourceFile>
       <FileName>CRTDR.cs</FileName>
@@ -207,25 +207,25 @@
   <FrequencySettings>
     <PluginToken>
       <AssemblyFilename>Common.dll</AssemblyFilename>
-      <TypeFullName>RightEdge.Common.FilteredDailyFrequency</TypeFullName>
+      <TypeFullName>RightEdge.Common.TimeFrequency</TypeFullName>
       <InterfaceImplemented>RightEdge.Common.FrequencyPlugin</InterfaceImplemented>
-      <Name>Daily Frequency with filter based on time of day</Name>
-      <Description>Daily Frequency with filter based on time of day</Description>
+      <Name>Time-based Bar Frequency</Name>
+      <Description>Time-based Bar Frequency</Description>
       <ConstructorArguments>
         <ArrayOfConstructorArgument />
       </ConstructorArguments>
       <HasSettings>True</HasSettings>
     </PluginToken>
-    <PluginXml>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;FilteredDailyFrequency&gt;&lt;StartTimeTicks&gt;342000000000&lt;/StartTimeTicks&gt;&lt;EndTimeTicks&gt;575400000000&lt;/EndTimeTicks&gt;&lt;/FilteredDailyFrequency&gt;</PluginXml>
+    <PluginXml>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TimeFrequency&gt;&lt;BarLengthTicks&gt;864000000000&lt;/BarLengthTicks&gt;&lt;/TimeFrequency&gt;</PluginXml>
   </FrequencySettings>
   <LiveLeadBars>0</LiveLeadBars>
   <LiveDataStartDate>2016-01-01T00:00:00</LiveDataStartDate>
   <DataStartDate>0001-01-01T00:00:00</DataStartDate>
-  <TradeStartDate>2003-08-07T00:00:00</TradeStartDate>
-  <RunEndDate>2016-06-10T00:00:00</RunEndDate>
+  <TradeStartDate>2003-01-01T00:00:00</TradeStartDate>
+  <RunEndDate>0001-01-01T00:00:00</RunEndDate>
   <StartingCapital>100000</StartingCapital>
-  <AllocationType>Percentage</AllocationType>
-  <Allocation>1</Allocation>
+  <AllocationType>Fixed</AllocationType>
+  <Allocation>1000</Allocation>
   <MaxOpenPositions>0</MaxOpenPositions>
   <MaxOpenPositionsPerSymbol>1</MaxOpenPositionsPerSymbol>
   <RestrictOpenOrders>false</RestrictOpenOrders>
