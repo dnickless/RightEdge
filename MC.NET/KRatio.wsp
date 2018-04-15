@@ -10,10 +10,10 @@
 	WindowCount = '0'
 
 [Wsp\Window_0]
-	ContainerHeight = '531'
+	ContainerHeight = '512'
 	ContainerWidth = '1750'
 	Flags = '2'
-	Height = '315'
+	Height = '301'
 	Left = '0'
 	MinX = '-1'
 	MinY = '-1'
@@ -54,7 +54,7 @@
 	AnchorFinishDate = '0'
 	BackTypeId = '275'
 	BackTypeName = 'Bars Back'
-	BreakOnSession = '0'
+	BreakOnSession = '1'
 	BuildDayFromMinutes = '0'
 	CallPut = '0'
 	CapacityId = '80'
@@ -65,21 +65,25 @@
 	ChartTypeId = '0'
 	ChartTypeName = 'Regular'
 	CumulativeDeltaChartType = '1'
+	CustomResolutionsInfo = '0;8;Regular;1;8;'
+	CustomResolutionsParams = ''
 	DataFeed = 'Interactive Brokers'
-	Description = 'Cognizant Technology Solutions Corporation'
+	DeltaType = '-1'
+	Description = ''
 	Exchange = 'SMART'
 	ExpirationDate = '0'
 	FieldId = '201'
 	FieldName = 'Trade'
-	FinishDate2Id = '42524'
+	FinishDate2Id = '43205'
 	FinishDate2Name = ''
-	FinishDateId = '42524'
+	FinishDateId = '43205'
 	FinishDateName = ''
 	FootPrintChartType = '0'
 	KagiReversal = '0,1'
 	KagiReversalPercent = '1'
 	KagiReversalType = '0'
 	LineBreakCount = '3'
+	Minor = '1'
 	PFigureBasis = '1'
 	PFigureBoxSize = '0,1'
 	PFigureReversal = '3'
@@ -99,6 +103,7 @@
 	ResolutionSizeName = ''
 	SessionsId = '0'
 	SessionsName = 'Default'
+	ShowDelta = '0'
 	ShowPercent = '0'
 	ShowPhantomBars = '1'
 	ShowRealOpen = '0'
@@ -125,8 +130,8 @@
 	ManualMode = '0'
 	MarginBottom = '5'
 	MarginTop = '5'
-	Maximum = '61,4742592592592'
-	Minimum = '59,9557407407408'
+	Maximum = '82,3433333333333'
+	Minimum = '80,0766666666667'
 	MovementSize.Long = '1'
 	MovementSize.Metric = 'False'
 	MovementSize.Price = '5'
@@ -159,11 +164,20 @@
 
 [Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler]
 	ColorOnly = '0'
+	DisplayAsPercentage = '0'
+	ImbalanceBidAsk = '0'
+	ImbalanceCandle = '1'
+	ImbalanceColorizing = '0'
+	ImbalanceMinDif = '0'
+	ImbalancePercentage = '200'
 	POC = '0'
 	PriceMarker = '1'
 	ShowCSFrame = '0'
+	ShowImbalanceArrow = '1'
+	ShowInvisiblePriceLevels = '0'
 	Show_X_as_I = '0'
 	UseStaticFontSize = '0'
+	VolumeDeltaPrintType = '0'
 
 [Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle]
 	Gradient = '1671430145'
@@ -189,10 +203,122 @@
 	ValueType = '8'
 	Width = '1'
 
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line100]
+	Color = '8421504'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line101]
+	Color = '12632256'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line102]
+	Color = '255'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line103]
+	Color = '16761087'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line104]
+	Color = '16711680'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line105]
+	Color = '16760832'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line106]
+	Color = '16777215'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line107]
+	Color = '65280'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line108]
+	Color = '65280'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line109]
+	Color = '255'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
 [Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line11]
 	Color = '10066329'
 	Enabled = '0'
 	Style = '73984'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line110]
+	Color = '16761087'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line111]
+	Color = '16711680'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line112]
+	Color = '16760832'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line113]
+	Color = '8421504'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line114]
+	Color = '12632256'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line115]
+	Color = '16777215'
+	Enabled = '0'
+	Style = '0'
 	ValueType = '8'
 	Width = '1'
 
@@ -847,17 +973,30 @@
 	ValueType = '8'
 	Width = '1'
 
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line97]
+	Color = '16777215'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line98]
+	Color = '255'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\BarStyle\Line99]
+	Color = '65280'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
 [Wsp\Window_0\ChartManager\Chart_0\Series_0\Styler\SymbolType]
-	BarType0 = '5'
-	BarType1 = '3'
-	BarType2 = '8'
-	BarType3 = '9'
-	BarType4 = '10'
-	BarType5 = '11'
-	BarType6 = '12'
-	BarType7 = '13'
-	BarType8 = '1'
-	ChartType = '1'
+	ChartType = '3'
+	SelectedBarTypeByChart = '4294967295:5 1:5 3:3 4:8 5:9 6:10 7:11 8:12 10:13 11:1 '
 
 [Wsp\Window_0\ChartManager\Chart_0\Series_0\VolumeObject]
 	VolumeBarWidth = '1'
@@ -1043,8 +1182,8 @@
 	ManualMode = '0'
 	MarginBottom = '5'
 	MarginTop = '5'
-	Maximum = '1,11111111111111'
-	Minimum = '-1,11111111111111'
+	Maximum = '1'
+	Minimum = '-1'
 	MovementSize.Long = '1'
 	MovementSize.Metric = 'False'
 	MovementSize.Price = '5'
@@ -1229,7 +1368,7 @@
 	AnchorFinishDate = '0'
 	BackTypeId = '275'
 	BackTypeName = 'Bars Back'
-	BreakOnSession = '0'
+	BreakOnSession = '1'
 	BuildDayFromMinutes = '0'
 	CallPut = '0'
 	CapacityId = '80'
@@ -1240,21 +1379,25 @@
 	ChartTypeId = '0'
 	ChartTypeName = 'Regular'
 	CumulativeDeltaChartType = '1'
+	CustomResolutionsInfo = '0;8;Regular;1;8;'
+	CustomResolutionsParams = ''
 	DataFeed = 'Interactive Brokers'
-	Description = 'The Kraft Heinz Company'
+	DeltaType = '-1'
+	Description = ''
 	Exchange = 'SMART'
 	ExpirationDate = '0'
 	FieldId = '201'
 	FieldName = 'Trade'
-	FinishDate2Id = '42524'
+	FinishDate2Id = '43205'
 	FinishDate2Name = ''
-	FinishDateId = '42524'
+	FinishDateId = '43205'
 	FinishDateName = ''
 	FootPrintChartType = '0'
 	KagiReversal = '0,1'
 	KagiReversalPercent = '1'
 	KagiReversalType = '0'
 	LineBreakCount = '3'
+	Minor = '1'
 	PFigureBasis = '1'
 	PFigureBoxSize = '0,1'
 	PFigureReversal = '3'
@@ -1274,6 +1417,7 @@
 	ResolutionSizeName = ''
 	SessionsId = '0'
 	SessionsName = 'Default'
+	ShowDelta = '0'
 	ShowPercent = '0'
 	ShowPhantomBars = '1'
 	ShowRealOpen = '0'
@@ -1300,8 +1444,8 @@
 	ManualMode = '0'
 	MarginBottom = '5'
 	MarginTop = '5'
-	Maximum = '85,5044444444444'
-	Minimum = '84,6155555555555'
+	Maximum = '61,1655555555556'
+	Minimum = '60,4544444444444'
 	MovementSize.Long = '1'
 	MovementSize.Metric = 'False'
 	MovementSize.Price = '5'
@@ -1334,11 +1478,20 @@
 
 [Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler]
 	ColorOnly = '0'
+	DisplayAsPercentage = '0'
+	ImbalanceBidAsk = '0'
+	ImbalanceCandle = '1'
+	ImbalanceColorizing = '0'
+	ImbalanceMinDif = '0'
+	ImbalancePercentage = '200'
 	POC = '0'
 	PriceMarker = '1'
 	ShowCSFrame = '0'
+	ShowImbalanceArrow = '1'
+	ShowInvisiblePriceLevels = '0'
 	Show_X_as_I = '0'
 	UseStaticFontSize = '0'
+	VolumeDeltaPrintType = '0'
 
 [Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle]
 	Gradient = '1671430145'
@@ -1364,10 +1517,122 @@
 	ValueType = '8'
 	Width = '1'
 
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line100]
+	Color = '8421504'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line101]
+	Color = '12632256'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line102]
+	Color = '255'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line103]
+	Color = '16761087'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line104]
+	Color = '16711680'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line105]
+	Color = '16760832'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line106]
+	Color = '16777215'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line107]
+	Color = '65280'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line108]
+	Color = '65280'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line109]
+	Color = '255'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
 [Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line11]
 	Color = '10066329'
 	Enabled = '0'
 	Style = '73984'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line110]
+	Color = '16761087'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line111]
+	Color = '16711680'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line112]
+	Color = '16760832'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line113]
+	Color = '8421504'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line114]
+	Color = '12632256'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line115]
+	Color = '16777215'
+	Enabled = '0'
+	Style = '0'
 	ValueType = '8'
 	Width = '1'
 
@@ -2022,17 +2287,30 @@
 	ValueType = '8'
 	Width = '1'
 
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line97]
+	Color = '16777215'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line98]
+	Color = '255'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\BarStyle\Line99]
+	Color = '65280'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
 [Wsp\Window_0\ChartManager\Chart_2\Series_0\Styler\SymbolType]
-	BarType0 = '5'
-	BarType1 = '1'
-	BarType2 = '8'
-	BarType3 = '9'
-	BarType4 = '10'
-	BarType5 = '11'
-	BarType6 = '12'
-	BarType7 = '13'
-	BarType8 = '1'
-	ChartType = '1'
+	ChartType = '3'
+	SelectedBarTypeByChart = '4294967295:5 1:5 3:1 4:8 5:9 6:10 7:11 8:12 10:13 11:1 '
 
 [Wsp\Window_0\ChartManager\Chart_2\Series_0\VolumeObject]
 	VolumeBarWidth = '1'
@@ -2063,7 +2341,7 @@
 	AnchorFinishDate = '0'
 	BackTypeId = '275'
 	BackTypeName = 'Bars Back'
-	BreakOnSession = '0'
+	BreakOnSession = '1'
 	BuildDayFromMinutes = '0'
 	CallPut = '0'
 	CapacityId = '80'
@@ -2074,21 +2352,25 @@
 	ChartTypeId = '0'
 	ChartTypeName = 'Regular'
 	CumulativeDeltaChartType = '1'
+	CustomResolutionsInfo = '0;8;Regular;1;8;'
+	CustomResolutionsParams = ''
 	DataFeed = 'Interactive Brokers'
-	Description = 'The Kraft Heinz Company'
+	DeltaType = '-1'
+	Description = ''
 	Exchange = 'SMART'
 	ExpirationDate = '0'
 	FieldId = '201'
 	FieldName = 'Trade'
-	FinishDate2Id = '42524'
+	FinishDate2Id = '43205'
 	FinishDate2Name = ''
-	FinishDateId = '42524'
+	FinishDateId = '43205'
 	FinishDateName = ''
 	FootPrintChartType = '0'
 	KagiReversal = '0,1'
 	KagiReversalPercent = '1'
 	KagiReversalType = '0'
 	LineBreakCount = '3'
+	Minor = '1'
 	PFigureBasis = '1'
 	PFigureBoxSize = '0,1'
 	PFigureReversal = '3'
@@ -2108,6 +2390,7 @@
 	ResolutionSizeName = ''
 	SessionsId = '0'
 	SessionsName = 'Default'
+	ShowDelta = '0'
 	ShowPercent = '0'
 	ShowPhantomBars = '1'
 	ShowRealOpen = '0'
@@ -2134,8 +2417,8 @@
 	ManualMode = '0'
 	MarginBottom = '5'
 	MarginTop = '5'
-	Maximum = '85,4093209876543'
-	Minimum = '85,1006790123457'
+	Maximum = '60,94'
+	Minimum = '60,74'
 	MovementSize.Long = '1'
 	MovementSize.Metric = 'False'
 	MovementSize.Price = '5'
@@ -2168,11 +2451,20 @@
 
 [Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler]
 	ColorOnly = '0'
+	DisplayAsPercentage = '0'
+	ImbalanceBidAsk = '0'
+	ImbalanceCandle = '1'
+	ImbalanceColorizing = '0'
+	ImbalanceMinDif = '0'
+	ImbalancePercentage = '200'
 	POC = '0'
 	PriceMarker = '1'
 	ShowCSFrame = '0'
+	ShowImbalanceArrow = '1'
+	ShowInvisiblePriceLevels = '0'
 	Show_X_as_I = '0'
 	UseStaticFontSize = '0'
+	VolumeDeltaPrintType = '0'
 
 [Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle]
 	Gradient = '1671430145'
@@ -2198,10 +2490,122 @@
 	ValueType = '8'
 	Width = '1'
 
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line100]
+	Color = '8421504'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line101]
+	Color = '12632256'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line102]
+	Color = '255'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line103]
+	Color = '16761087'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line104]
+	Color = '16711680'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line105]
+	Color = '16760832'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line106]
+	Color = '16777215'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line107]
+	Color = '65280'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line108]
+	Color = '65280'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line109]
+	Color = '255'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
 [Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line11]
 	Color = '10066329'
 	Enabled = '0'
 	Style = '73984'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line110]
+	Color = '16761087'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line111]
+	Color = '16711680'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line112]
+	Color = '16760832'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line113]
+	Color = '8421504'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line114]
+	Color = '12632256'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line115]
+	Color = '16777215'
+	Enabled = '0'
+	Style = '0'
 	ValueType = '8'
 	Width = '1'
 
@@ -2856,17 +3260,30 @@
 	ValueType = '8'
 	Width = '1'
 
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line97]
+	Color = '16777215'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line98]
+	Color = '255'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
+[Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\BarStyle\Line99]
+	Color = '65280'
+	Enabled = '0'
+	Style = '0'
+	ValueType = '8'
+	Width = '1'
+
 [Wsp\Window_0\ChartManager\Chart_3\Series_0\Styler\SymbolType]
-	BarType0 = '5'
-	BarType1 = '1'
-	BarType2 = '8'
-	BarType3 = '9'
-	BarType4 = '10'
-	BarType5 = '11'
-	BarType6 = '12'
-	BarType7 = '13'
-	BarType8 = '1'
-	ChartType = '1'
+	ChartType = '3'
+	SelectedBarTypeByChart = '4294967295:5 1:5 3:1 4:8 5:9 6:10 7:11 8:12 10:13 11:1 '
 
 [Wsp\Window_0\ChartManager\Chart_3\Series_0\VolumeObject]
 	VolumeBarWidth = '1'
@@ -3255,18 +3672,24 @@
 	CancelMarketTimeOut = '30000'
 	ConvertEntryInterval = '0'
 	ConvertExitInterval = '0'
-	ConvertPartialFill = '0'
+	ConvertPartFillEntryInterval = '0'
+	ConvertPartFillExitInterval = '0'
 	CurDataFeed = 'Interactive Brokers'
+	EmulateStop = '0'
+	EmulateStopLimit = '0'
 	FilePath = ''
 	IsConfirmWindow = '0'
 	IsConvertExitToMarket = '0'
 	IsConvertLimitToMarket = '0'
+	IsConvertPartFillEntryToMarket = '0'
+	IsConvertPartFillExitToMarket = '0'
 	IsPlaySound = '0'
 	IsRepeatSound = '0'
 	NeedCancelMarketOrders = '1'
 	OptimizeSendOrdersMode = '0'
 	ReculcOnMPChange = '1'
 	ReculcOnOrderFill = '1'
+	ReculcOnOrderReject = '0'
 	ShowSyncMPDialogMode = '0'
 	SystemName = 'Interactive Brokers'
 	isBrokerRT = '1'
@@ -3819,6 +4242,7 @@ The reserved words supported in Portfolio optimization:
 	BTMode = '1'
 	BTOFAMode = '0'
 	BTOFAPoints = '0'
+	BTOFA_TIF = '0'
 	BarReference = '50'
 	BidIndex = '-1'
 	CalcPnLInSymbolCurrency = '1'
